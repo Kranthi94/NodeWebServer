@@ -43,15 +43,20 @@ hbs.registerHelper('capitalize', (text) => {
 });
 
 app.get('/', (req, res) => {
-    res.send({
-        name : 'Kranthi',
-        age : 24
-    });
+  res.render('home.hbs', {
+      pageTitle : 'home'
+  });
 })
 
 app.get('/about', (req, res) => {
     res.render('about.hbs', {
-        pageTitle : 'Welcome to about section'
+        pageTitle : 'about section'
+    });
+});
+
+app.get('/projects', (req, res) => {
+    res.render('about.hbs', {
+        pageTitle : 'projects section'
     });
 });
 
